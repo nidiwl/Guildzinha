@@ -147,7 +147,7 @@ function sendBattleReport(battle, channelId) {
     fields,
   };
 
-  bot.channels.get(channelId || config.discord.feedChannelId2).send({ embed }).then(() => {
+  bot.channels.get(channelId || config.discord.battleChannelId).send({ embed }).then(() => {
     logger.info(`Successfully posted log of battle between ${title}.`);
   }).catch(err => {
     logger.error(err);
