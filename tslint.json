@@ -1,0 +1,17 @@
+{
+  "defaultSeverity": "error",
+  "extends": "./node_modules/tslint/lib/configs/recommended",
+  "jsRules": {},
+  "rules": {
+    "arrow-parens": false,
+    "ban-types": false,
+    "member-access": [true, "no-public"],
+    "no-empty": {
+      "severity": "warning"
+    },
+    "quotemark": [true, "single"],
+    "variable-name": [true, "allow-leading-underscore"],
+    "unified-signatures": false
+  },
+  "rulesDirectory": []
+}
