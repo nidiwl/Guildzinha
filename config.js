@@ -9,7 +9,7 @@ module.exports = {
     token: process.env.DISCORD_TOKEN,
     // The ID of the discord channel to post battleboard infos to.
     feedChannelId: process.env.ALBION_FEED_CHANNEL_ID,
-    feedChannelId: process.env.ALBION_FEED_CHANNEL_ID2,
+    feedChannelId2: process.env.ALBION_FEED_CHANNEL_ID2,
     // The ID of the discord channel to post albion status infos to.
     statusChannelId: process.env.ALBION_STATUS_CHANNEL_ID
   },
