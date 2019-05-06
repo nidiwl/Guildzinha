@@ -48,6 +48,11 @@ bot.on('ready', () => {
     setInterval(checkServerStatus, 60000);
   }
 
+  var http = require("http");
+  setInterval(function() {
+      http.get("https://mibr-killboard.herokuapp.com");
+  }, 300000); // every 5 minutes (300000)
+
   checkBattles();
   checkKillboard();
 
@@ -142,7 +147,7 @@ function sendBattleReport(battle, channelId) {
     fields,
   };
 
-  bot.channels.get(channelId || config.discord.feedChannelId).send({ embed }).then(() => {
+  bot.channels.get(channelId || config.discord.feedChannelId2).send({ embed }).then(() => {
     logger.info(`Successfully posted log of battle between ${title}.`);
   }).catch(err => {
     logger.error(err);
