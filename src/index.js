@@ -43,15 +43,17 @@ bot.on('ready', () => {
   logger.info('Connected');
   logger.info(`Logged in as: ${bot.user.username} - (${bot.user.id})`);
 
+  var http = require("http");
+  setInterval(function() {
+      http.get("https://mibr-killboard.herokuapp.com");
+  }, 300000); // every 5 minutes (300000)
+
   if (config.discord.statusChannelId) {
     checkServerStatus();
     setInterval(checkServerStatus, 60000);
   }
 
-  var http = require("http");
-  setInterval(function() {
-      http.get("https://mibr-killboard.herokuapp.com");
-  }, 300000); // every 5 minutes (300000)
+
 
   checkBattles();
   checkKillboard();
