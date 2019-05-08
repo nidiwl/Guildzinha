@@ -59,6 +59,11 @@ bot.on('ready', () => {
   setInterval(checkKillboard, 30000);
 });
 
+var http = require("http");
+setInterval(function() {
+    http.get("http://<your app name>.herokuapp.com");
+}, 300000); // every 5 minutes (300000)
+
 function checkBattles() {
   logger.info('Checking battles...');
   Albion.getBattles({ limit: 20, offset: 0 }).then(battles => {
