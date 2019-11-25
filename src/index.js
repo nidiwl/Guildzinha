@@ -47,7 +47,7 @@ bot.on('ready', () => {
 
   if (config.discord.statusChannelId) {
     checkServerStatus();
-    setInterval(checkServerStatus, 60000);
+    setInterval(checkServerStatus, 30000);
   }
 
 
@@ -55,7 +55,7 @@ bot.on('ready', () => {
   checkBattles();
   checkKillboard();
 
-  setInterval(checkBattles, 60000);
+  setInterval(checkBattles, 30000);
   setInterval(checkKillboard, 30000);
 });
 
