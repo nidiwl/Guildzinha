@@ -23,9 +23,9 @@ module.exports = {
   },
   battle: {
     // Min players to report as battle
-    minPlayers: 10,
+    minPlayers: 20,
     // Min guild players to report as battle
-    minRelevantPlayers: 3
+    minRelevantPlayers: 5
   },
   kill: {
     // Min killfame to report kill
