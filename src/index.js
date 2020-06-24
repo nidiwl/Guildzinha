@@ -40,7 +40,8 @@ let lastAlbionStatusMsg = db.get('recents.albionStatusMsg').value();
 const bot = new Discord.Client();
 
 bot.on('message', msg=>{
-    if(msg.content = "qwe123"){
+    if(message.author.bot) return;
+    if(msg.content === "qwe123"){
         msg.reply('Hello!');
     }
 })
