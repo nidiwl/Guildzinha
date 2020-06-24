@@ -328,6 +328,14 @@ bot.on('message', msg => {
     return;
   }
 
+//teste para reclamar de @everyone
+  matches = message.match(/@everyone)/);
+  if (matches && matches.length) {
+   const embed = new MessageEmbed()
+   .setDescription('https://tenor.com/view/angry-raging-notification-gif-14477177');
+   message.channel.send(embed);
+  }
+
   if (message.substring(0, 1) !== '!') { return; }
 
   const args = message.substring(1).split(' ');
