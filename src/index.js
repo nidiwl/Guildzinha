@@ -370,5 +370,5 @@ bot.on('message', msg => {
         message.channel.send('pong');
       }
   });
-}
+  
 bot.login(config.discord.token);
