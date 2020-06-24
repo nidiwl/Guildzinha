@@ -39,6 +39,12 @@ let lastAlbionStatusMsg = db.get('recents.albionStatusMsg').value();
 // Initialize Discord Bot
 const bot = new Discord.Client();
 
+bot.on('message', msg=>{
+    if(msg.content = "qwe123"){
+        msg.reply('Hello!');
+    }
+})
+
 bot.on('ready', () => {
   logger.info('Connected');
   logger.info(`Logged in as: ${bot.user.username} - (${bot.user.id})`);
@@ -363,12 +369,4 @@ bot.on('message', msg => {
   }
 });
 
-  bot.on('message', msg => {
-      // If the message is "ping"
-      if (message.content === 'ping') {
-        // Send "pong" to the same channel
-        message.channel.send('pong');
-      }
-  });
-  
 bot.login(config.discord.token);
