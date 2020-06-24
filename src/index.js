@@ -44,7 +44,6 @@ bot.on('ready', () => {
   logger.info(`Logged in as: ${bot.user.username} - (${bot.user.id})`);
 
   bot.on('message', msg=>{
-      if(message.author.bot) return;
       if(msg.content === "qwe123"){
           msg.reply('Hello!');
       }
