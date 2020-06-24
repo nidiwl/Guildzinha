@@ -39,18 +39,16 @@ let lastAlbionStatusMsg = db.get('recents.albionStatusMsg').value();
 // Initialize Discord Bot
 const bot = new Discord.Client();
 
-bot.on('message', msg=>{
-    if(message.author.bot) return;
-    if(msg.content === "qwe123"){
-        msg.reply('Hello!');
-    }
-})
-
 bot.on('ready', () => {
   logger.info('Connected');
   logger.info(`Logged in as: ${bot.user.username} - (${bot.user.id})`);
 
-
+  bot.on('message', msg=>{
+      if(message.author.bot) return;
+      if(msg.content === "qwe123"){
+          msg.reply('Hello!');
+      }
+  })
 
   if (config.discord.statusChannelId) {
     checkServerStatus();
