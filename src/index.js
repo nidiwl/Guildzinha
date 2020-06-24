@@ -137,7 +137,7 @@ function sendBattleReport(battle, channelId) {
   const didWin = battle.rankedFactions[0].name === config.guild.alliance;
 
   const embed = {
-    url: `https://handholdreport.com/#/killboard/${battle.id}`,
+    url: `https://albiononline.com/pt/killboard/battles/${battle.id}`,
     description: battle.is5v5
       ? `Winner's Fame: ${battle.rankedFactions[0].killFame.toLocaleString()}`
       : `Players: ${battle.players.length}, Kills: ${battle.totalKills}, Fame: ${battle.totalFame.toLocaleString()}`,
