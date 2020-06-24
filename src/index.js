@@ -13,9 +13,6 @@ const { createImage, getItemUrl } = require('./createImage');
 
 const config = require('../config');
 
-const { Client, MessageEmbed } = require('discord.js');
-const client = new Client();
-
 const adapter = new FileSync('.db.json');
 const db = low(adapter);
 db.defaults({ recents: { battleId: 0, eventId: 0 } }).write();
@@ -330,20 +327,6 @@ bot.on('message', msg => {
     });
     return;
   }
-
-  // If the message is "how to embed"
-  if (message.content === 'qwe123') {
-  // We can create embeds using the MessageEmbed constructor
-  // Read more about all that you can do with the constructor
-  // over at https://discord.js.org/#/docs/main/master/class/MessageEmbed
-    const embed = new MessageEmbed()
-    // Set the title of the field
-      .setTitle('A slick little embed')
-    // Set the main content of the embed
-      .setDescription('https://tenor.com/view/angry-raging-notification-gif-14477177');
-  // Send the embed to the same channel as the message
-    message.channel.send(embed);
-}
 
   if (message.substring(0, 1) !== '!') { return; }
 
