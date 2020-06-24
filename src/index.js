@@ -44,8 +44,8 @@ bot.on('ready', () => {
   logger.info(`Logged in as: ${bot.user.username} - (${bot.user.id})`);
 
   bot.on('message', msg=>{
-      if(msg.content === "qwe123"){
-          msg.reply('Hello!');
+      if(msg.content === "@everyone"){
+          msg.reply('https://tenor.com/view/angry-raging-notification-gif-14477177');
       }
   })
 
