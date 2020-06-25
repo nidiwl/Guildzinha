@@ -44,7 +44,7 @@ bot.on('ready', () => {
   logger.info(`Logged in as: ${bot.user.username} - (${bot.user.id})`);
 
   bot.on('message', msg=>{
-      if(msg.content == "@everyone"){
+      if(msg.content === "@everyone"){
           msg.reply('https://pbs.twimg.com/media/Dizo-OgX0AABq_b.jpg');
       }
   })
