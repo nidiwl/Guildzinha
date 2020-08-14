@@ -41,13 +41,7 @@ const bot = new Discord.Client();
 
 bot.on('ready', () => {
   logger.info('Connected');
-  logger.info(`Logged in as: ${bot.user.username} - (${bot.user.id})`);
-
-  bot.on('message', msg=>{
-      if(msg.content === "@everyone"){
-          msg.reply('https://pbs.twimg.com/media/Dizo-OgX0AABq_b.jpg');
-      }
-  })
+  logger.info(`Logged in as: ${bot.user.username} - (${bot.user.id})`)
 
   if (config.discord.statusChannelId) {
     checkServerStatus();
@@ -70,7 +64,7 @@ setInterval(function() {
 
 function checkBattles() {
   logger.info('Checking battles...');
-  Albion.getBattles({ limit: 20, offset: 0 }).then(battles => {
+  Albion.getBattles({ limit: 50, offset: 0 }).then(battles => {
     battles
       // Filter out battles that have already been processed
       .filter(battleData => battleData.id > lastBattleId)
