@@ -60,11 +60,11 @@ bot.on('ready', () => {
 var http = require("http");
 setInterval(function() {
     http.get("http://mibr-killboard.herokuapp.com");
-}, 300000); // every 5 minutes (300000)d
+}, 300000); // every 5 minutes (300000)
 
 function checkBattles() {
   logger.info('Checking battles...');
-  Albion.getBattles({ limit: 50, offset: 0 }).then(battles => {
+  Albion.getBattles({ limit: 20, offset: 0 }).then(battles => {
     battles
       // Filter out battles that have already been processed
       .filter(battleData => battleData.id > lastBattleId)
