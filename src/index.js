@@ -43,10 +43,10 @@ bot.on('ready', () => {
   logger.info('Connected');
   logger.info(`Logged in as: ${bot.user.username} - (${bot.user.id})`)
 
-  if (config.discord.statusChannelId) {
+/*  if (config.discord.statusChannelId) {
     checkServerStatus();
     setInterval(checkServerStatus, 30000);
-  }
+  }*/
 
 
 
