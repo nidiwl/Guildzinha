@@ -1,5 +1,7 @@
 Variaçao do Albion Guildbot criada por mim para monitorar as atividade da guildzinha no albion
 
+Atualmente este projeto está desatualizado e com as funçoes danificas.
+
 # Albion Guildbot
 A Bot that posts interesting events about a guild to Discord.
 
